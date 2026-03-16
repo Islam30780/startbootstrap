@@ -1,0 +1,174 @@
+:root{
+  --color-primary:#f4623a;
+  --color-primary-dark:#db4f2c;
+  --color-dark:#212529;
+  --color-dark-soft:#343a40;
+  --color-light:#f8f9fa;
+  --color-white:#ffffff;
+  --color-text:#6c757d;
+  --color-muted:#adb5bd;
+  --color-border:#e9ecef;
+
+  --container-width:1140px;
+  --container-padding:20px;
+
+  --space-12:12px;
+  --space-16:16px;
+  --space-24:24px;
+  --space-32:32px;
+  --space-48:48px;
+  --space-72:72px;
+  --space-96:96px;
+
+  --radius-sm:6px;
+  --radius-md:16px;
+  --shadow-soft:0 18px 45px rgba(33, 37, 41, 0.08);
+  --transition:0.3s ease;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul{
+  margin:0;
+}
+
+body{
+  font-family:"Merriweather Sans", sans-serif;
+  line-height:1.65;
+  color:var(--color-text);
+  background:var(--color-white);
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn,
+.logo,
+.nav-menu a{
+  font-family:"Merriweather Sans", sans-serif;
+}
+
+p{
+  font-family:"Merriweather", serif;
+}
+
+.container{
+  width:min(100%, var(--container-width));
+  margin-inline:auto;
+  padding-inline:var(--container-padding);
+}
+
+.section{
+  padding:var(--space-96) 0;
+}
+
+.narrow{
+  max-width:760px;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:58px;
+  padding:14px 34px;
+  border:none;
+  border-radius:999px;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  transition:transform var(--transition), background-color var(--transition), color var(--transition);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--color-primary);
+  color:var(--color-white);
+}
+
+.btn-primary:hover{
+  background:var(--color-primary-dark);
+}
+
+.btn-light{
+  background:var(--color-white);
+  color:var(--color-dark);
+}
+
+.btn-light-dark{
+  background:var(--color-white);
+  color:var(--color-dark);
+}
+
+.divider{
+  width:64px;
+  height:4px;
+  margin:var(--space-24) auto var(--space-32);
+  border-radius:999px;
+}
+
+.divider-light{
+  background:rgba(255, 255, 255, 0.9);
+}
+
+.divider-dark{
+  background:var(--color-primary);
+}
+
+@media (max-width:900px){
+  .section{
+    padding:var(--space-72) 0;
+  }
+}
+
+@media (max-width:640px){
+  .container{
+    padding-inline:16px;
+  }
+
+  .btn{
+    width:100%;
+  }
+}
